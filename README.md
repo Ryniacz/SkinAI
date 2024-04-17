@@ -1,31 +1,26 @@
-SkinAI to zaawansowany system oparty na sztucznej inteligencji, którego 
-celem jest automatyczna analiza obrazów skóry w celu wykrycia i diagnozy 
-różnych chorób skóry. Ma na celu zapewnienie szybkiej, dokładnej i metody 
-diagnozowania chorób skóry, aby wesprzeć dermatologów i zwiększyć 
-dostęp do wysokiej jakości opieki dermatologicznej. 
+SkinAI is an advanced system based on artificial intelligence, designed for the automatic analysis of skin images to detect and diagnose various skin diseases. Its aim is to provide a quick, accurate, and efficient method of diagnosing skin diseases to support dermatologists and enhance access to high-quality dermatological care.
 
+Programming Language: Python
+Libraries: TensorFlow, Keras, NumPy, Matplotlib, scikit-learn
+Function: Classification of skin diseases using a Convolutional Neural Network (CNN)
+Input: Labeled dataset of skin images
+Output: Model accuracy assessment, confusion matrix, classification report, accuracy and loss visualizations, and sample images with predictions
+Script Operation Description:
 
-Język programowania: Python
-Biblioteki: TensorFlow, Keras, NumPy, Matplotlib, scikit-learn
-Funkcja: Klasyfikacja chorób skóry za pomocą sieci neuronowej konwolucyjnej (CNN)
-Wejście: Zbiór danych obrazów skóry z etykietami
-Wyjście: Ocena dokładności modelu, macierz pomyłek, raport klasyfikacji, wizualizacje dokładności i straty oraz przykładowe obrazy z przewidywaniami
-Opis działania skryptu:
+Model Loading: The script begins by loading trained model weights that have performed best on validation data.
 
-Ładowanie modelu: Skrypt rozpoczyna od wczytania wytrenowanych wag do modelu, które najlepiej sprawdziły się na danych walidacyjnych.
+Model Evaluation: The model is evaluated on the test dataset, and the results (loss and accuracy) are displayed on the console.
 
-Ocena modelu: Model jest oceniany na zbiorze danych testowych, a wyniki (strata i dokładność) są wyświetlane na konsoli.
+Predictions: It makes predictions on the test set, then assigns the most probable class for each test image.
 
-Predykcje: Wykonuje predykcje na zbiorze testowym, a następnie przypisuje najbardziej prawdopodobną klasę dla każdego obrazu testowego.
+True Labels: The script prepares a vector of true labels using data from the test generator.
 
-Prawdziwe etykiety: Skrypt przygotowuje wektor prawdziwych etykiet, używając danych z generatora testowego.
+Training History Visualization: Displays plots of accuracy and loss for the training and validation data, which helps assess how the model learned over time.
 
-Wizualizacja historii treningu: Wyświetla wykresy dokładności i straty dla danych treningowych i walidacyjnych, co pomaga ocenić, jak model uczył się w czasie.
+Confusion Matrix: Creates and displays a confusion matrix, which is a graphical representation of the classification outcomes. It is useful for understanding which classes are confused by the model.
 
-Macierz pomyłek: Tworzy i wyświetla macierz pomyłek, która jest graficznym przedstawieniem wyników klasyfikacji. Jest to użyteczne do zrozumienia, które klasy są mylone przez model.
+Classification Report: The script generates a classification report that includes metrics such as precision, recall, and F1 score for each class.
 
-Raport klasyfikacji: Skrypt generuje raport klasyfikacji, który zawiera metryki takie jak precyzja, pełność (recall) i wynik F1 dla każdej klasy.
+Sample Predictions: At the end, it displays five examples of test images along with their true and predicted labels, providing insight into the model's performance.
 
-Przykładowe przewidywania: Na końcu wyświetla pięć przykładów obrazów testowych wraz z ich prawdziwymi i przewidywanymi etykietami, co daje wgląd w działanie modelu.
-
-Należy zwrócić uwagę, że powyższy skrypt musi być uruchomiony w środowisku, gdzie odpowiednie biblioteki są już zainstalowane i skonfigurowane, a także, że dane muszą być wcześniej przygotowane i podzielone na treningowe, walidacyjne i testowe. Skrypt zakłada także, że zbiór danych jest zbalansowany i odpowiednio oznakowany, a obrazy są przeskalowane do jednolitego rozmiaru.
+Note that the above script must be run in an environment where the appropriate libraries are already installed and configured, and that the data must be pre-processed and divided into training, validation, and test sets. The script also assumes that the dataset is balanced and properly labeled, and that images are scaled to a uniform size.
