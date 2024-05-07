@@ -1,25 +1,21 @@
-SkinAI is a sophisticated AI-driven system engineered for the automated analysis of dermatological images to identify various skin conditions. This technology aims to expedite and refine the diagnosis of skin diseases, offering support to dermatologists and improving the availability of top-tier dermatological care.
+SkinAI is an advanced AI system designed for the automated evaluation of dermatological images to identify a range of skin conditions. This tool is intended to enhance the speed and accuracy of diagnosing skin diseases, supporting dermatologists and enhancing access to high-quality skin care.
 
-Programming Environment: Python
-Key Libraries: TensorFlow, Keras, NumPy, Matplotlib, scikit-learn
-Functionality: Utilizes a Convolutional Neural Network (CNN) for the classification of skin diseases.
-Input: A labeled dataset of skin images.
-Output: Evaluation of model accuracy, confusion matrix, detailed classification report, visualizations of accuracy and loss, and examples of image predictions.
+Programming Environment: Python Key Libraries: TensorFlow, Keras, NumPy, Matplotlib, scikit-learn Functionality: Employs a Convolutional Neural Network (CNN) for the classification of skin conditions. Input: A dataset of labeled skin images. Output: Outputs model accuracy evaluation, a confusion matrix, a comprehensive classification report, visual representations of model accuracy and loss, and sample image predictions.
 
-Operational Breakdown of the Script:
+Script Workflow:
 
-Model Loading: Initiates by importing a pre-trained model with optimal weights derived from validation data.
+Model Loading: Begins by loading a pre-trained model equipped with the best weights from previous validation efforts.
 
-Model Evaluation: Assesses the model using a test dataset to calculate loss and accuracy, which are then outputted to the console.
+Model Evaluation: Evaluates the model with a test dataset to determine loss and accuracy, which are then displayed.
 
-Predictions: Generates predictions for the test dataset, classifying each image into the most likely disease category.
+Predictions: Outputs predictions for the test dataset, categorizing each image under the most probable disease classification.
 
-True Labels Preparation: Constructs a vector of actual labels from the test dataset for comparison.
+True Labels Preparation: Creates a vector of actual labels from the test dataset for accuracy assessment.
 
-Training History Visualization: Charts depicting training and validation accuracy and loss over time are displayed to visualize the model's learning progression.
+Training History Visualization: Displays charts of training and validation accuracy and loss through time to illustrate the model’s learning curve.
 
-Confusion Matrix: Generates and displays a confusion matrix to visually represent how well the model distinguishes between different diseases.
+Confusion Matrix: Compiles and exhibits a confusion matrix to visually indicate the model's performance in differentiating among various diseases.
 
-Classification Report: Produces a report detailing precision, recall, and F1 scores for each disease category, reflecting the model’s classification accuracy.
+Classification Report: Generates a detailed report with precision, recall, and F1 scores for each disease category, showcasing the model’s classification capabilities.
 
-Sample Predictions Display: Presents a selection of five test images alongside their true and predicted labels to showcase the model’s diagnostic accuracy.
+Sample Predictions Display: Demonstrates a series of five test images along with their actual and predicted labels to highlight the model’s diagnostic proficiency.
